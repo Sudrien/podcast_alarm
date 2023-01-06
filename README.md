@@ -17,3 +17,4 @@ Relevant points on setup I was writing for:
 - `crontab -e`
 - `0 7 * * * /home/dietpi/podcast_alarm/podcast_alarm.py`
 - in my case
+- In the future, hopefully support a pool of podcasts - [Security Now!](https://twit.tv/shows/security-now) being a weekly, It might need more. 
