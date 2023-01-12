@@ -15,6 +15,7 @@ Relevant points on setup I was writing for:
 - Maybe https://dietpi.com/forum/t/kernel-source-code/15487 will tell me which sources to use and I'll have a try at it.
 - just cron it. 
 - `crontab -e`
-- `0 7 * * * /home/dietpi/podcast_alarm/podcast_alarm.py`
+- `0 7 * * 1-5 /home/dietpi/podcast_alarm/podcast_alarm2.py`
+- `30 */4 * * * /home/dietpi/podcast_alarm/podcast_download.py`
+- [crohtab.guru](https://crontab.guru/) will help with yours
 - in my case
-- In the future, hopefully support a pool of podcasts - [Security Now!](https://twit.tv/shows/security-now) being a weekly, It might need more. 
