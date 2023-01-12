@@ -39,6 +39,7 @@ try:
 
 	# get first random music
 	random_timestamp, random_mp3 = random.choice(list(mp3_metadata.items()))
+	print random_mp3
 	pygame.mixer.music.load(mp3_dir + random_mp3)
 	pygame.mixer.music.play()
 
@@ -46,13 +47,15 @@ try:
 	while datetime.datetime.now() <= stop_time:
 		if RPi.GPIO.input(23) == RPi.GPIO.LOW:
 			break
-		if target_volume < 0.08:
+		if target_volume < 0.07:
 			target_volume += 0.0001
 			pygame.mixer.music.set_volume( target_volume )
 			print('volume: %1.6F %1.6F' % (target_volume, pygame.mixer.music.get_volume()))
 		if not pygame.mixer.music.get_busy():
 			random_timestamp, random_mp3 = random.choice(list(mp3_metadata.items()))
+			print random_mp3
 			pygame.mixer.music.load(mp3_dir + random_mp3)
+			pygame.mixer.music.play()
 		time.sleep(1)
 except KeyboardInterrupt:
 	print('Ctrl+C\'d?')
