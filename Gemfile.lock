@@ -1,0 +1,20 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    epoll (0.3.0)
+    nokogiri (1.13.10-aarch64-linux)
+      racc (~> 1.4)
+    racc (1.6.2)
+    rpi_gpio (0.5.0)
+      epoll (~> 0.3)
+
+PLATFORMS
+  aarch64-linux
+
+DEPENDENCIES
+  epoll
+  nokogiri
+  rpi_gpio
+
+BUNDLED WITH
+   2.4.2
